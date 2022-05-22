@@ -34,14 +34,15 @@
   "devDependencies": {
     "coc.nvim": "^0.0.77",
     "ts-loader": "^8.0.2",
-    "typescript": "^3.9.7",
+    "typescript": "^3.9.10",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
     "graphql": "^15.3.0",
     "graphql-config": "^3.0.3",
-    "graphql-language-service-server": "^2.5.0-alpha.4",
+    "graphql-language-service-server": "^2.7.0",
     "prettier": "^2.0.5"
   }
 }

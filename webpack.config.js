@@ -1,4 +1,5 @@
 const path = require('path')
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
@@ -11,14 +12,14 @@ module.exports = {
     mainFields: ['module', 'main'],
     extensions: ['.js', '.ts'],
   },
-  externals: {
-    'coc.nvim': 'commonjs coc.nvim',
-  },
+    externals: [
+        nodeExternals(),
+        { 'coc.nvim': 'commonjs coc.nvim' }
+    ],
   module: {
     rules: [
       {
         test: /\.ts$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: 'ts-loader',
